@@ -1,5 +1,18 @@
 import { FINDINGS } from '../lib/findings';
 
+function labelForSourceUrl(url: string): string {
+  if (url.includes('/core-concepts/syncoverview')) return 'Sync overview';
+  const match = url.match(/\/connectors\/applications\/([^/]+)/);
+  if (match) {
+    if (match[1].toLowerCase() === 'monday.com') return 'monday.com connector docs';
+    const slug = match[1]
+      .replace(/-/g, ' ')
+      .replace(/\b\w/g, (c) => c.toUpperCase());
+    return `${slug} connector docs`;
+  }
+  return url.replace('https://', '');
+}
+
 export default function ConnectorsPage() {
   return (
     <div className="space-y-6">
@@ -50,7 +63,7 @@ export default function ConnectorsPage() {
                           rel="noreferrer"
                           className="text-navy-500 underline underline-offset-2 hover:text-orange-600"
                         >
-                          {url.replace('https://', '')}
+                          {labelForSourceUrl(url)}
                         </a>
                       </li>
                     ))}
