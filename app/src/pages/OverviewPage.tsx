@@ -2,7 +2,7 @@ import { FINDINGS, type Verification } from '../lib/findings';
 
 const VERIFICATION_LABEL: Record<Verification, string> = {
   confirmed: 'Confirmed',
-  inferred: 'Inferred from platform policy',
+  inferred: 'Inferred',
   unverified: 'Not verified',
 };
 
@@ -12,19 +12,42 @@ const VERIFICATION_CLASSES: Record<Verification, string> = {
   unverified: 'bg-red-100 text-red-800',
 };
 
+const SHORT_METHOD: Record<(typeof FINDINGS)[number]['key'], string> = {
+  salesforce: 'REST + Bulk API polling',
+  coupa: 'REST API polling',
+  monday: 'REST API polling',
+  workday_adaptive: 'REST API polling, full re-import',
+};
+
+const SHORT_APPROACH: Record<(typeof FINDINGS)[number]['key'], string> = {
+  salesforce: 'Azure Data Factory (ADF)',
+  coupa: 'Azure Data Factory (ADF)',
+  monday: 'Custom API (in development)',
+  workday_adaptive: 'Custom API (in development)',
+};
+
+const SHORT_PAIN: Record<(typeof FINDINGS)[number]['key'], string> = {
+  salesforce: 'latency on some tables; Lakeflow Connect had limitations',
+  coupa: 'wants near-real-time, not batch',
+  monday: 'wants a managed alternative',
+  workday_adaptive: 'wants a managed alternative',
+};
+
+const SHORT_SYNC: Record<(typeof FINDINGS)[number]['key'], string> = {
+  salesforce: '1 min (Enterprise/BC plan)',
+  coupa: '1 min (Enterprise/BC plan)',
+  monday: '5 min',
+  workday_adaptive: 'not verified',
+};
+
 export default function OverviewPage() {
   return (
     <div className="space-y-8">
       <section>
         <h1 className="text-2xl font-bold text-slate-900">Overview</h1>
         <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-600">
-          This demo evaluates Fivetran against BD's current ingestion approach across four systems: Salesforce,
-          Coupa, monday.com, and Workday Adaptive Planning. Each system today uses a different ingestion tool
-          maintained separately (Azure Data Factory for two of them, custom in-house API code for the other two). The
-          question this demo is built to answer is whether replacing those four separate approaches with four managed
-          Fivetran connectors landing in one Snowflake destination reduces the latency, maintenance burden, and
-          tooling sprawl BD has reported. Every sync-frequency and capability figure below is sourced from Fivetran's
-          published documentation; where a figure could not be directly confirmed, the card says so.
+          Evaluating Fivetran against BD's current ingestion for Salesforce, Coupa, monday.com, and Workday
+          Adaptive Planning. Every figure below is sourced from Fivetran's docs; see the Connectors page for links.
         </p>
       </section>
 
@@ -40,18 +63,13 @@ export default function OverviewPage() {
 
             <dl className="mt-4 space-y-3 text-sm">
               <div>
-                <dt className="font-medium text-slate-500">Current approach</dt>
-                <dd className="mt-0.5 text-slate-800">{f.currentApproach}</dd>
-              </div>
-              <div>
-                <dt className="font-medium text-slate-500">Current pain (BD's reported experience)</dt>
-                <dd className="mt-0.5 text-slate-800">{f.currentPain}</dd>
+                <dt className="font-medium text-slate-500">Today</dt>
+                <dd className="mt-0.5 text-slate-800">{SHORT_APPROACH[f.key]} — {SHORT_PAIN[f.key]}</dd>
               </div>
               <div className="rounded-md bg-navy-50 p-3">
-                <dt className="font-medium text-navy-700">Fivetran's verified capability</dt>
+                <dt className="font-medium text-navy-700">With Fivetran</dt>
                 <dd className="mt-1 text-navy-900">
-                  <span className="font-semibold text-orange-600">{f.fastestSyncFrequency}</span> fastest sync
-                  frequency. {f.fivetranSyncMethod}
+                  <span className="font-semibold text-orange-600">{SHORT_SYNC[f.key]}</span> · {SHORT_METHOD[f.key]}
                 </dd>
               </div>
             </dl>
