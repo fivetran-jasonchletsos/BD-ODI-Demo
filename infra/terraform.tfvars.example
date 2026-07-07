@@ -1,0 +1,21 @@
+# Copy this file to terraform.tfvars and fill in real values.
+# terraform.tfvars is gitignored; never commit real credentials.
+
+fivetran_api_key    = "your-fivetran-api-key"
+fivetran_api_secret = "your-fivetran-api-secret"
+
+snowflake_account   = "xy12345.us-east-1.snowflakecomputing.com"
+snowflake_database  = "jason_chletsos_bd"
+snowflake_warehouse = "your-snowflake-warehouse"
+snowflake_role      = "your-snowflake-role"
+snowflake_user      = "your-snowflake-user"
+snowflake_password  = "your-snowflake-password"
+snowflake_region    = "GCP_US_EAST4"
+
+# Fastest verified sync frequencies (minutes) -- see connectors.tf for
+# per-connector source citations. Only change these if you have a newer,
+# verified Fivetran source confirming a different value.
+salesforce_sync_frequency_minutes       = "1"
+coupa_sync_frequency_minutes            = "1"
+monday_sync_frequency_minutes           = "5"
+workday_adaptive_sync_frequency_minutes = "1440" # NOT VERIFIED -- see TODO in connectors.tf

@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: stg_coupa__suppliers
+    description: "One row per Coupa supplier (staged from the coupa_suppliers seed)."
+    columns:
+      - name: supplier_id
+        description: "Primary key. Coupa Supplier id."
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_coupa__purchase_orders
+    description: "One row per Coupa purchase order (staged from the coupa_purchase_orders seed)."
+    columns:
+      - name: po_id
+        description: "Primary key. Coupa PO id."
+        tests:
+          - unique
+          - not_null
+      - name: supplier_id
+        description: "Foreign key to stg_coupa__suppliers."
+        tests:
+          - not_null
+
+  - name: stg_coupa__invoices
+    description: "One row per Coupa invoice (staged from the coupa_invoices seed)."
+    columns:
+      - name: invoice_id
+        description: "Primary key. Coupa Invoice id."
+        tests:
+          - unique
+          - not_null
+      - name: po_id
+        description: "Foreign key to stg_coupa__purchase_orders."
+        tests:
+          - not_null

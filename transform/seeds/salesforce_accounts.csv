@@ -1,0 +1,201 @@
+account_id,account_name,industry,billing_state,owner_id,created_date
+001000001,Lakeside Health System,Pharmaceuticals,OH,0050008,2022-10-13
+001000002,Lakeside Labs,Medical Devices,WA,0050002,2022-03-03
+001000003,Cedar Clinic Group,Biotechnology,NJ,0050018,2023-02-12
+001000004,Beacon University Hospital,Biotechnology,CO,0050019,2023-07-24
+001000005,Summit Regional Hospital,Government,MD,0050009,2022-11-15
+001000006,Harborview Care Network,Medical Devices,CA,0050013,2022-07-18
+001000007,Pinecrest Care Network,Pharmaceuticals,NY,0050024,2024-07-29
+001000008,Beacon Medical Center,Government,CA,0050018,2023-08-24
+001000009,Elmhurst Care Network,Biotechnology,CA,0050002,2025-09-16
+001000010,Meridian Diagnostics,Medical Devices,OH,0050004,2024-02-18
+001000011,Ashford Surgical Center,Life Sciences,IL,0050012,2023-12-29
+001000012,Harborview Diagnostics,Medical Devices,IL,0050018,2026-02-02
+001000013,Meridian Regional Hospital,Higher Education,FL,0050009,2025-08-03
+001000014,Beacon Clinic Group,Life Sciences,NY,0050008,2022-03-07
+001000015,Highland University Hospital,Pharmaceuticals,CA,0050007,2025-03-07
+001000016,Highland Clinic Group,Higher Education,FL,0050021,2024-07-28
+001000017,Northgate Diagnostics,Hospital & Health Care,OH,0050024,2025-02-23
+001000018,Beacon Diagnostics,Government,FL,0050012,2023-03-26
+001000019,Northgate Labs,Higher Education,CA,0050025,2022-04-07
+001000020,Lakeside Regional Hospital,Hospital & Health Care,WA,0050020,2022-05-11
+001000021,Fairview University Hospital,Higher Education,NC,0050018,2022-01-24
+001000022,Lakeside Labs,Pharmaceuticals,MD,0050004,2023-08-25
+001000023,Ironwood Regional Hospital,Higher Education,NJ,0050024,2026-01-13
+001000024,Ashford Labs,Hospital & Health Care,TX,0050021,2023-09-04
+001000025,Vantage Health Partners,Biotechnology,MA,0050012,2026-04-11
+001000026,Union Labs,Healthcare,MD,0050016,2022-02-09
+001000027,Lakeside Care Network,Pharmaceuticals,OH,0050002,2023-05-09
+001000028,Crestwood Medical Center,Medical Devices,MN,0050003,2026-04-07
+001000029,Beacon Regional Hospital,Hospital & Health Care,MN,0050018,2022-12-05
+001000030,Ashford Labs,Government,PA,0050018,2026-03-27
+001000031,Harborview Diagnostics,Government,VA,0050015,2024-11-25
+001000032,Sterling Medical Center,Biotechnology,OH,0050003,2023-11-24
+001000033,Summit Health Partners,Biotechnology,OH,0050001,2022-05-26
+001000034,Riverside Clinic Group,Medical Devices,NY,0050011,2022-05-26
+001000035,Vantage Clinic Group,Pharmaceuticals,MN,0050007,2025-01-09
+001000036,Northgate Health Partners,Higher Education,OH,0050016,2024-04-13
+001000037,Harborview Medical Center,Medical Devices,WA,0050012,2024-05-17
+001000038,Ironwood Surgical Center,Healthcare,TX,0050002,2024-04-04
+001000039,Highland Medical Center,Biotechnology,PA,0050007,2025-01-03
+001000040,Sterling Regional Hospital,Government,IL,0050009,2024-08-05
+001000041,Meridian Medical Center,Higher Education,TX,0050002,2025-08-28
+001000042,Beacon Health System,Medical Devices,OH,0050006,2024-04-12
+001000043,Cascade Surgical Center,Biotechnology,FL,0050002,2022-12-04
+001000044,Fairview Health System,Government,NC,0050015,2023-08-08
+001000045,Ironwood Labs,Higher Education,MA,0050007,2023-08-31
+001000046,Harborview Health System,Healthcare,MD,0050002,2022-04-13
+001000047,Crestwood Surgical Center,Hospital & Health Care,NY,0050017,2022-06-14
+001000048,Union Medical Center,Medical Devices,OH,0050013,2022-09-03
+001000049,Crestwood Clinic Group,Healthcare,CA,0050014,2025-09-08
+001000050,Crestwood Health Partners,Life Sciences,NC,0050007,2025-10-03
+001000051,Highland Clinic Group,Pharmaceuticals,FL,0050005,2025-10-07
+001000052,Brookfield Surgical Center,Life Sciences,CA,0050001,2024-07-27
+001000053,Elmhurst Health Partners,Medical Devices,CA,0050018,2023-03-13
+001000054,Vantage Diagnostics,Hospital & Health Care,VA,0050003,2023-05-16
+001000055,Pinecrest Diagnostics,Hospital & Health Care,CO,0050018,2025-12-11
+001000056,Brookfield Health Partners,Healthcare,GA,0050022,2022-08-01
+001000057,Northgate Diagnostics,Medical Devices,TX,0050024,2025-02-07
+001000058,Northgate Diagnostics,Pharmaceuticals,PA,0050023,2023-12-04
+001000059,Harborview Diagnostics,Higher Education,NC,0050002,2022-07-09
+001000060,Ironwood Diagnostics,Healthcare,NJ,0050011,2026-04-29
+001000061,Northgate Diagnostics,Hospital & Health Care,CO,0050018,2025-12-16
+001000062,Ironwood Labs,Healthcare,TX,0050003,2025-11-16
+001000063,Northgate Labs,Healthcare,VA,0050019,2025-02-05
+001000064,Northgate University Hospital,Hospital & Health Care,NY,0050010,2024-01-17
+001000065,Riverside Care Network,Biotechnology,OH,0050022,2022-07-30
+001000066,Pinecrest Labs,Government,MA,0050008,2022-11-29
+001000067,Union University Hospital,Healthcare,IL,0050024,2023-11-12
+001000068,Ironwood Clinic Group,Pharmaceuticals,IL,0050023,2022-08-10
+001000069,Fairview Health System,Higher Education,OH,0050007,2024-07-31
+001000070,Pinecrest Diagnostics,Biotechnology,OH,0050001,2025-09-13
+001000071,Harborview University Hospital,Life Sciences,NC,0050003,2026-05-03
+001000072,Ashford Care Network,Government,MD,0050001,2022-08-25
+001000073,Ashford Regional Hospital,Pharmaceuticals,NY,0050004,2025-05-06
+001000074,Ironwood Care Network,Life Sciences,WA,0050020,2024-11-13
+001000075,Lakeside University Hospital,Biotechnology,NC,0050002,2025-12-22
+001000076,Ironwood Health System,Biotechnology,VA,0050014,2022-05-24
+001000077,Highland Health Partners,Life Sciences,TX,0050024,2023-09-08
+001000078,Vantage Diagnostics,Government,MD,0050013,2025-11-28
+001000079,Brookfield Labs,Hospital & Health Care,PA,0050014,2025-09-23
+001000080,Fairview Regional Hospital,Pharmaceuticals,FL,0050018,2022-01-01
+001000081,Brookfield Diagnostics,Biotechnology,WA,0050019,2025-05-27
+001000082,Highland Surgical Center,Higher Education,CO,0050022,2023-03-14
+001000083,Vantage Surgical Center,Hospital & Health Care,CA,0050010,2024-11-21
+001000084,Elmhurst Care Network,Medical Devices,OH,0050022,2023-09-28
+001000085,Meridian Clinic Group,Hospital & Health Care,NJ,0050002,2023-05-17
+001000086,Cascade Health Partners,Medical Devices,CO,0050014,2025-07-13
+001000087,Crestwood Clinic Group,Government,MN,0050013,2023-05-15
+001000088,Northgate Health System,Medical Devices,WA,0050008,2022-12-27
+001000089,Vantage Surgical Center,Healthcare,OH,0050004,2024-07-23
+001000090,Northgate Surgical Center,Life Sciences,CO,0050020,2026-01-13
+001000091,Vantage University Hospital,Higher Education,IL,0050024,2024-08-30
+001000092,Sterling Diagnostics,Biotechnology,NC,0050025,2026-05-12
+001000093,Vantage Surgical Center,Biotechnology,NC,0050015,2022-06-08
+001000094,Brookfield Clinic Group,Pharmaceuticals,MD,0050011,2025-01-11
+001000095,Cedar Regional Hospital,Hospital & Health Care,OH,0050013,2025-11-22
+001000096,Northgate Clinic Group,Medical Devices,WA,0050014,2023-11-09
+001000097,Beacon Surgical Center,Government,NY,0050007,2024-05-10
+001000098,Fairview Health Partners,Healthcare,FL,0050016,2022-01-13
+001000099,Pinecrest Diagnostics,Government,WA,0050018,2026-03-11
+001000100,Beacon Health Partners,Biotechnology,MN,0050008,2023-07-13
+001000101,Ironwood Surgical Center,Healthcare,FL,0050011,2025-10-01
+001000102,Fairview Regional Hospital,Higher Education,MA,0050020,2024-12-29
+001000103,Summit University Hospital,Healthcare,CA,0050021,2024-05-27
+001000104,Northgate Surgical Center,Hospital & Health Care,NY,0050009,2024-02-16
+001000105,Highland Clinic Group,Higher Education,MD,0050011,2026-04-08
+001000106,Fairview Diagnostics,Government,NC,0050003,2024-08-21
+001000107,Summit Labs,Healthcare,VA,0050008,2025-08-24
+001000108,Cedar Health System,Healthcare,OH,0050007,2022-02-11
+001000109,Elmhurst Regional Hospital,Biotechnology,MA,0050016,2025-10-03
+001000110,Lakeside Health Partners,Biotechnology,CO,0050023,2023-06-09
+001000111,Pinecrest Regional Hospital,Medical Devices,IL,0050010,2022-08-10
+001000112,Crestwood Health System,Pharmaceuticals,FL,0050013,2026-01-04
+001000113,Harborview Medical Center,Biotechnology,TX,0050023,2026-05-02
+001000114,Brookfield Health Partners,Medical Devices,NY,0050012,2024-12-27
+001000115,Ironwood Care Network,Medical Devices,MD,0050001,2024-05-10
+001000116,Cascade Medical Center,Government,VA,0050021,2024-07-30
+001000117,Northgate University Hospital,Hospital & Health Care,NC,0050020,2025-01-07
+001000118,Cascade Surgical Center,Government,NC,0050011,2023-05-18
+001000119,Cedar Diagnostics,Higher Education,OH,0050025,2024-08-09
+001000120,Crestwood Health Partners,Government,MD,0050001,2024-10-09
+001000121,Highland Regional Hospital,Higher Education,PA,0050012,2026-06-22
+001000122,Ashford Care Network,Pharmaceuticals,NC,0050018,2022-01-21
+001000123,Vantage Clinic Group,Medical Devices,OH,0050024,2024-04-12
+001000124,Cascade Labs,Biotechnology,MN,0050021,2025-12-28
+001000125,Cascade Surgical Center,Healthcare,CA,0050010,2023-03-30
+001000126,Fairview Clinic Group,Pharmaceuticals,VA,0050016,2025-02-07
+001000127,Vantage Care Network,Government,MD,0050012,2025-12-10
+001000128,Sterling Diagnostics,Pharmaceuticals,NC,0050008,2022-09-05
+001000129,Harborview Care Network,Medical Devices,IL,0050007,2023-03-20
+001000130,Cascade Diagnostics,Pharmaceuticals,TX,0050007,2023-08-30
+001000131,Meridian Care Network,Hospital & Health Care,GA,0050001,2025-12-21
+001000132,Beacon Regional Hospital,Pharmaceuticals,NY,0050002,2025-02-07
+001000133,Brookfield Regional Hospital,Higher Education,TX,0050001,2025-03-21
+001000134,Brookfield Surgical Center,Higher Education,CO,0050011,2023-01-13
+001000135,Riverside Diagnostics,Higher Education,TX,0050003,2024-03-31
+001000136,Cascade Medical Center,Healthcare,MA,0050005,2025-02-26
+001000137,Brookfield Medical Center,Biotechnology,TX,0050018,2026-04-15
+001000138,Ironwood Health Partners,Biotechnology,FL,0050015,2024-06-25
+001000139,Brookfield Health Partners,Government,GA,0050019,2025-06-25
+001000140,Riverside Health Partners,Medical Devices,PA,0050021,2023-03-09
+001000141,Ashford Medical Center,Hospital & Health Care,OH,0050006,2025-02-04
+001000142,Cedar Regional Hospital,Healthcare,WA,0050015,2025-11-12
+001000143,Elmhurst Surgical Center,Pharmaceuticals,NY,0050008,2023-08-14
+001000144,Brookfield Surgical Center,Medical Devices,OH,0050009,2026-06-02
+001000145,Crestwood Clinic Group,Government,TX,0050018,2023-04-06
+001000146,Northgate Diagnostics,Hospital & Health Care,CA,0050002,2022-12-06
+001000147,Brookfield Health Partners,Pharmaceuticals,CO,0050004,2024-08-17
+001000148,Brookfield University Hospital,Pharmaceuticals,MN,0050015,2022-06-14
+001000149,Elmhurst Health System,Government,MD,0050020,2023-05-28
+001000150,Summit Medical Center,Biotechnology,NJ,0050025,2025-10-08
+001000151,Ashford Health Partners,Healthcare,IL,0050016,2024-11-28
+001000152,Sterling Diagnostics,Hospital & Health Care,WA,0050021,2024-10-04
+001000153,Cedar Surgical Center,Life Sciences,WA,0050011,2023-10-20
+001000154,Lakeside Regional Hospital,Life Sciences,WA,0050023,2024-10-11
+001000155,Brookfield University Hospital,Healthcare,CO,0050003,2023-10-07
+001000156,Ashford Care Network,Medical Devices,FL,0050017,2022-01-03
+001000157,Beacon Surgical Center,Government,NY,0050007,2024-11-27
+001000158,Pinecrest Health Partners,Higher Education,CO,0050025,2022-04-16
+001000159,Harborview Diagnostics,Hospital & Health Care,GA,0050015,2025-12-01
+001000160,Cascade Medical Center,Healthcare,OH,0050023,2022-11-21
+001000161,Brookfield Labs,Healthcare,WA,0050003,2023-04-06
+001000162,Lakeside Surgical Center,Medical Devices,MA,0050016,2026-01-07
+001000163,Brookfield Labs,Pharmaceuticals,WA,0050016,2024-08-25
+001000164,Meridian Surgical Center,Hospital & Health Care,FL,0050007,2025-05-12
+001000165,Vantage Regional Hospital,Medical Devices,NC,0050025,2026-06-06
+001000166,Ironwood Care Network,Pharmaceuticals,NJ,0050010,2026-01-26
+001000167,Brookfield Health Partners,Higher Education,MA,0050015,2025-01-08
+001000168,Cascade Care Network,Life Sciences,FL,0050015,2023-10-22
+001000169,Harborview Clinic Group,Government,OH,0050025,2024-04-21
+001000170,Riverside Care Network,Higher Education,FL,0050013,2025-09-21
+001000171,Northgate Surgical Center,Healthcare,MA,0050017,2025-04-23
+001000172,Highland Medical Center,Higher Education,TX,0050017,2024-07-24
+001000173,Summit Regional Hospital,Government,MA,0050003,2024-08-19
+001000174,Ashford Care Network,Government,CA,0050011,2025-10-13
+001000175,Beacon University Hospital,Life Sciences,MN,0050018,2022-03-15
+001000176,Elmhurst Medical Center,Biotechnology,GA,0050008,2026-03-10
+001000177,Cedar University Hospital,Medical Devices,TX,0050015,2022-12-07
+001000178,Brookfield Health System,Healthcare,MD,0050002,2023-08-24
+001000179,Pinecrest Care Network,Government,MA,0050008,2024-12-23
+001000180,Ironwood Health Partners,Hospital & Health Care,IL,0050006,2022-06-11
+001000181,Elmhurst University Hospital,Biotechnology,MN,0050019,2022-10-21
+001000182,Meridian Surgical Center,Pharmaceuticals,CO,0050009,2025-09-27
+001000183,Summit Surgical Center,Pharmaceuticals,IL,0050003,2024-06-23
+001000184,Pinecrest Health Partners,Pharmaceuticals,WA,0050023,2023-05-28
+001000185,Sterling Diagnostics,Biotechnology,FL,0050016,2022-08-07
+001000186,Meridian University Hospital,Life Sciences,GA,0050023,2023-08-28
+001000187,Summit University Hospital,Pharmaceuticals,NJ,0050019,2025-11-05
+001000188,Riverside Health Partners,Higher Education,GA,0050025,2026-06-25
+001000189,Meridian Health Partners,Life Sciences,OH,0050021,2023-01-25
+001000190,Elmhurst Diagnostics,Hospital & Health Care,TX,0050021,2025-08-16
+001000191,Riverside Diagnostics,Higher Education,NY,0050019,2024-01-18
+001000192,Northgate Medical Center,Pharmaceuticals,MD,0050024,2024-04-30
+001000193,Union Clinic Group,Hospital & Health Care,VA,0050017,2024-10-24
+001000194,Ashford Regional Hospital,Pharmaceuticals,MN,0050010,2026-03-09
+001000195,Highland Medical Center,Higher Education,CA,0050005,2026-03-25
+001000196,Meridian University Hospital,Life Sciences,CA,0050013,2022-01-29
+001000197,Ashford Labs,Medical Devices,CO,0050012,2025-10-09
+001000198,Ashford Health Partners,Government,VA,0050004,2025-10-14
+001000199,Meridian Surgical Center,Healthcare,MD,0050020,2023-03-30
+001000200,Cedar Surgical Center,Pharmaceuticals,WA,0050004,2022-10-14

@@ -1,0 +1,61 @@
+account_code,account_name,account_type,level_code
+REV001,Product Revenue,Revenue,L04
+REV002,Service Revenue,Revenue,L09
+REV003,Recurring Revenue,Revenue,L10
+REV004,Other Revenue,Revenue,L01
+REV005,Rebate Adjustments,Revenue,L03
+EXP001,Cost of Goods Sold,Expense,L02
+EXP002,R&D Expense,Expense,L10
+EXP003,Sales & Marketing Expense,Expense,L12
+EXP004,G&A Expense,Expense,L10
+EXP005,Facilities Expense,Expense,L05
+EXP006,IT Expense,Expense,L08
+EXP007,Travel & Entertainment,Expense,L02
+EXP008,Professional Services Expense,Expense,L02
+EXP009,Freight & Logistics Expense,Expense,L04
+EXP010,Regulatory & Compliance Expense,Expense,L07
+HC001,Full-Time Headcount,Headcount,L04
+HC002,Contractor Headcount,Headcount,L04
+HC003,Open Requisitions,Headcount,L08
+EXP019,Regulatory & Compliance Expense - L03,Expense,L03
+EXP020,Sales & Marketing Expense - L04,Expense,L04
+EXP021,Facilities Expense - L02,Expense,L02
+EXP022,Cost of Goods Sold - L04,Expense,L04
+EXP023,Facilities Expense - L07,Expense,L07
+EXP024,Regulatory & Compliance Expense - L10,Expense,L10
+EXP025,Travel & Entertainment - L08,Expense,L08
+EXP026,G&A Expense - L04,Expense,L04
+EXP027,R&D Expense - L02,Expense,L02
+EXP028,Travel & Entertainment - L12,Expense,L12
+EXP029,Professional Services Expense - L08,Expense,L08
+EXP030,Sales & Marketing Expense - L12,Expense,L12
+EXP031,Travel & Entertainment - L10,Expense,L10
+EXP032,Travel & Entertainment - L01,Expense,L01
+EXP033,Freight & Logistics Expense - L05,Expense,L05
+EXP034,G&A Expense - L11,Expense,L11
+EXP035,Professional Services Expense - L07,Expense,L07
+EXP036,Freight & Logistics Expense - L06,Expense,L06
+EXP037,IT Expense - L01,Expense,L01
+EXP038,Professional Services Expense - L09,Expense,L09
+EXP039,Regulatory & Compliance Expense - L07,Expense,L07
+EXP040,Professional Services Expense - L10,Expense,L10
+EXP041,G&A Expense - L06,Expense,L06
+EXP042,Sales & Marketing Expense - L12,Expense,L12
+EXP043,R&D Expense - L10,Expense,L10
+EXP044,Travel & Entertainment - L03,Expense,L03
+EXP045,Travel & Entertainment - L04,Expense,L04
+EXP046,G&A Expense - L06,Expense,L06
+EXP047,IT Expense - L07,Expense,L07
+EXP048,Facilities Expense - L04,Expense,L04
+EXP049,Facilities Expense - L04,Expense,L04
+EXP050,Travel & Entertainment - L10,Expense,L10
+EXP051,Professional Services Expense - L01,Expense,L01
+EXP052,Regulatory & Compliance Expense - L04,Expense,L04
+EXP053,R&D Expense - L08,Expense,L08
+EXP054,Cost of Goods Sold - L07,Expense,L07
+EXP055,Regulatory & Compliance Expense - L06,Expense,L06
+EXP056,IT Expense - L07,Expense,L07
+EXP057,Cost of Goods Sold - L08,Expense,L08
+EXP058,Travel & Entertainment - L12,Expense,L12
+EXP059,Professional Services Expense - L07,Expense,L07
+EXP060,R&D Expense - L07,Expense,L07

@@ -1,0 +1,81 @@
+supplier_id,supplier_name,category,risk_rating
+SUP00001,Solace Group,Logistics,Low
+SUP00002,Vantis Industries,Professional Services,Medium
+SUP00003,NovaMed Labs,Laboratory Equipment,Medium
+SUP00004,Bright Path Group,IT Hardware,Low
+SUP00005,Ridgeway Supply Co.,Office Supplies,Medium
+SUP00006,Anchorpoint Partners,Logistics,Low
+SUP00007,Grayson Partners,Medical Supplies,High
+SUP00008,Coreline Partners,Logistics,Low
+SUP00009,Bright Path Inc.,Office Supplies,Low
+SUP00010,Trueform Group,Office Supplies,Low
+SUP00011,Ridgeway Industries,Facilities & Maintenance,Low
+SUP00012,Anchorpoint Industries,Office Supplies,Medium
+SUP00013,NovaMed Inc.,Professional Services,Low
+SUP00014,Vertex Group,Logistics,Medium
+SUP00015,NovaMed Labs,Laboratory Equipment,Low
+SUP00016,Northstar Supply Co.,Office Supplies,Low
+SUP00017,Solace Inc.,Laboratory Equipment,Medium
+SUP00018,Bluewell Partners,Facilities & Maintenance,Low
+SUP00019,Kestrel Group,Professional Services,Low
+SUP00020,Northstar Partners,Office Supplies,Medium
+SUP00021,Kestrel Industries,Medical Supplies,Medium
+SUP00022,Halcyon Inc.,IT Hardware,Low
+SUP00023,Trueform Labs,Office Supplies,Low
+SUP00024,Kestrel Inc.,Logistics,High
+SUP00025,Vertex Partners,Professional Services,Low
+SUP00026,Clearline Industries,IT Hardware,Medium
+SUP00027,Bluewell Inc.,Logistics,Low
+SUP00028,NovaMed Labs,Professional Services,Medium
+SUP00029,Northstar Inc.,Facilities & Maintenance,Medium
+SUP00030,Northstar Labs,Professional Services,Low
+SUP00031,Bright Path Industries,Professional Services,Low
+SUP00032,Bluewell Logistics,Office Supplies,Low
+SUP00033,Anchorpoint Logistics,Medical Supplies,Low
+SUP00034,Northstar Industries,Medical Supplies,Low
+SUP00035,Northstar Labs,IT Hardware,Medium
+SUP00036,Vertex Labs,Office Supplies,Medium
+SUP00037,Vertex Inc.,Laboratory Equipment,Low
+SUP00038,Bluewell Inc.,Laboratory Equipment,High
+SUP00039,Anchorpoint Group,Laboratory Equipment,Low
+SUP00040,Clearline Industries,Laboratory Equipment,Low
+SUP00041,Halcyon Supply Co.,Facilities & Maintenance,Low
+SUP00042,NovaMed Industries,Laboratory Equipment,Medium
+SUP00043,Ridgeway Group,Logistics,Medium
+SUP00044,Vantis Logistics,Professional Services,Low
+SUP00045,Ironclad Industries,Facilities & Maintenance,Low
+SUP00046,Northstar Inc.,Medical Supplies,Low
+SUP00047,Solace Labs,Laboratory Equipment,Low
+SUP00048,Anchorpoint Logistics,Professional Services,High
+SUP00049,Clearline Group,Office Supplies,Medium
+SUP00050,Bluewell Supply Co.,Medical Supplies,Medium
+SUP00051,Vertex Labs,Professional Services,Low
+SUP00052,Coreline Group,Packaging,High
+SUP00053,Bright Path Partners,Professional Services,Medium
+SUP00054,Coreline Supply Co.,Logistics,High
+SUP00055,Northstar Group,Laboratory Equipment,High
+SUP00056,Vantis Group,Professional Services,Medium
+SUP00057,Ironclad Logistics,Packaging,Medium
+SUP00058,Anchorpoint Inc.,Medical Supplies,Low
+SUP00059,NovaMed Inc.,Office Supplies,Low
+SUP00060,Anchorpoint Inc.,Packaging,Medium
+SUP00061,Bright Path Inc.,IT Hardware,Medium
+SUP00062,Halcyon Supply Co.,Packaging,Low
+SUP00063,Kestrel Labs,Packaging,Low
+SUP00064,Apex Inc.,Medical Supplies,Medium
+SUP00065,Ironclad Labs,Office Supplies,Medium
+SUP00066,Clearline Supply Co.,Logistics,Low
+SUP00067,Bluewell Group,Laboratory Equipment,Low
+SUP00068,Vantis Partners,IT Hardware,Medium
+SUP00069,Anchorpoint Inc.,Packaging,Low
+SUP00070,Clearline Group,IT Hardware,Medium
+SUP00071,Ridgeway Inc.,Facilities & Maintenance,Low
+SUP00072,Anchorpoint Group,IT Hardware,Low
+SUP00073,Coreline Inc.,Professional Services,Low
+SUP00074,Apex Partners,Professional Services,High
+SUP00075,Fieldstone Industries,Facilities & Maintenance,Medium
+SUP00076,Ironclad Supply Co.,Logistics,Medium
+SUP00077,Northstar Industries,Laboratory Equipment,High
+SUP00078,Ironclad Partners,Laboratory Equipment,Low
+SUP00079,Halcyon Logistics,Office Supplies,Medium
+SUP00080,Grayson Supply Co.,Professional Services,Medium

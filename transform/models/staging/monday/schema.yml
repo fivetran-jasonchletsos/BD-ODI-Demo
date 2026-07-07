@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_monday__boards
+    description: "One row per monday.com board (staged from the monday_boards seed)."
+    columns:
+      - name: board_id
+        description: "Primary key. monday.com board id."
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_monday__items
+    description: "One row per monday.com item (staged from the monday_items seed)."
+    columns:
+      - name: item_id
+        description: "Primary key. monday.com item id."
+        tests:
+          - unique
+          - not_null
+      - name: board_id
+        description: "Foreign key to stg_monday__boards."
+        tests:
+          - not_null

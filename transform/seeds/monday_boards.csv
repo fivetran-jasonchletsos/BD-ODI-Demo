@@ -1,0 +1,16 @@
+board_id,board_name,workspace
+BRD0001,Vendor Onboarding,Supply Chain
+BRD0002,Facility Maintenance Requests,Facilities
+BRD0003,IT Change Requests,R&D
+BRD0004,Regulatory Submissions,R&D
+BRD0005,Product Launch Tracker,Facilities
+BRD0006,Capital Equipment Requests,IT Projects
+BRD0007,Quality Audit Actions,Facilities
+BRD0008,Site Readiness Checklist,Facilities
+BRD0009,Contract Renewals,Supply Chain
+BRD0010,Field Service Escalations,R&D
+BRD0011,Lab Equipment Calibration,R&D
+BRD0012,New Hire Onboarding,IT Projects
+BRD0013,Marketing Campaign Tracker,IT Projects
+BRD0014,Clinical Trial Milestones,IT Projects
+BRD0015,Distribution Center Rollout,IT Projects

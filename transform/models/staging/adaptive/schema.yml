@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: stg_adaptive__accounts
+    description: "One row per Workday Adaptive Planning account (metadata), staged from the adaptive_accounts seed."
+    columns:
+      - name: account_code
+        description: "Primary key. Adaptive Planning account code."
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_adaptive__account_transactions
+    description: >
+      One row per Adaptive Planning account transaction (the prospect's named
+      "Account Transactions" export), staged from the adaptive_account_transactions
+      seed. Represents budget/actual/forecast amounts by account, level, and period.
+    columns:
+      - name: transaction_id
+        description: "Primary key. Synthetic transaction id."
+        tests:
+          - unique
+          - not_null
+      - name: account_code
+        description: "Foreign key to stg_adaptive__accounts."
+        tests:
+          - not_null
+
+  - name: stg_adaptive__cube_sheet_headcount
+    description: >
+      One row per level/department/position/period headcount plan row,
+      representing the prospect's named "Cube Sheet" (multidimensional
+      headcount plan), staged from the adaptive_cube_sheet_headcount seed.
+      No single-column natural primary key exists in the source; uniqueness
+      is asserted on the level/department/position/period grain instead.
+
+  - name: stg_adaptive__factsheet
+    description: >
+      One row per level/metric/period summary value, representing the
+      prospect's named "Factsheet" (a per-cost-center summary sheet),
+      staged from the adaptive_factsheet seed. No single-column natural
+      primary key exists in the source; uniqueness is asserted on the
+      level/metric/period grain instead.

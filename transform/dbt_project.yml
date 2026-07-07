@@ -1,0 +1,43 @@
+name: 'bd_pipeline'
+version: '1.0.0'
+config-version: 2
+
+profile: 'bd_pipeline'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+analysis-paths: ["analyses"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  bd_pipeline:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
+
+seeds:
+  bd_pipeline:
+    # Salesforce object ids are purely-numeric-looking strings (e.g. "001000012")
+    # that DuckDB's CSV sniffer would otherwise infer as integers, silently
+    # dropping the leading zeros that give them their real Salesforce shape.
+    # Force these columns to varchar so ids round-trip as opaque strings.
+    salesforce_accounts:
+      +column_types:
+        account_id: varchar
+        owner_id: varchar
+    salesforce_opportunities:
+      +column_types:
+        opportunity_id: varchar
+        account_id: varchar
+    salesforce_contacts:
+      +column_types:
+        contact_id: varchar
+        account_id: varchar

@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: fct_pipeline
+    description: "One row per Salesforce Opportunity, with the owning Account's name joined in."
+    columns:
+      - name: opportunity_id
+        description: "Primary key. Salesforce Opportunity Id."
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_supplier_spend
+    description: >
+      One row per Coupa purchase order, with supplier name and a linked
+      invoice status/amount joined in. See model SQL for the invoice
+      aggregation logic (a PO may have more than one invoice).
+    columns:
+      - name: po_id
+        description: "Primary key. Coupa PO id."
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_project_status
+    description: "One row per monday.com item, with the parent board's name joined in."
+    columns:
+      - name: item_id
+        description: "Primary key. monday.com item id."
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_budget_vs_actual
+    description: >
+      One row per Adaptive Planning account_code + period_date, comparing
+      Budget/Forecast/Actual amounts. Built entirely from Adaptive's own
+      version dimension rather than a Coupa rollup -- see the design note
+      at the top of the model SQL for why no clean Coupa join key exists
+      in this data set.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - account_code
+            - period_date
+    columns:
+      - name: account_code
+        description: "Part of the compound primary key, along with period_date."
+        tests:
+          - not_null
+      - name: period_date
+        description: "Part of the compound primary key, along with account_code."
+        tests:
+          - not_null

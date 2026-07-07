@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: stg_salesforce__accounts
+    description: "One row per Salesforce Account (staged from the salesforce_accounts seed)."
+    columns:
+      - name: account_id
+        description: "Primary key. Salesforce Account Id."
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_salesforce__opportunities
+    description: "One row per Salesforce Opportunity (staged from the salesforce_opportunities seed)."
+    columns:
+      - name: opportunity_id
+        description: "Primary key. Salesforce Opportunity Id."
+        tests:
+          - unique
+          - not_null
+      - name: account_id
+        description: "Foreign key to stg_salesforce__accounts."
+        tests:
+          - not_null
+
+  - name: stg_salesforce__contacts
+    description: "One row per Salesforce Contact (staged from the salesforce_contacts seed)."
+    columns:
+      - name: contact_id
+        description: "Primary key. Salesforce Contact Id."
+        tests:
+          - unique
+          - not_null
+      - name: account_id
+        description: "Foreign key to stg_salesforce__accounts."
+        tests:
+          - not_null
