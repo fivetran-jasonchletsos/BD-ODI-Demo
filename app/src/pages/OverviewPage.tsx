@@ -40,6 +40,10 @@ const SHORT_SYNC: Record<(typeof FINDINGS)[number]['key'], string> = {
   workday_adaptive: 'not verified',
 };
 
+const UNVERIFIED_NOTE: Partial<Record<(typeof FINDINGS)[number]['key'], string>> = {
+  workday_adaptive: "Fivetran doesn't publish one — every sync is a full re-import, not incremental.",
+};
+
 export default function OverviewPage() {
   return (
     <div className="space-y-8">
@@ -71,6 +75,9 @@ export default function OverviewPage() {
                 <dd className="mt-1 text-navy-900">
                   <span className="font-semibold text-orange-600">{SHORT_SYNC[f.key]}</span> · {SHORT_METHOD[f.key]}
                 </dd>
+                {UNVERIFIED_NOTE[f.key] && (
+                  <dd className="mt-1 text-xs text-slate-500">{UNVERIFIED_NOTE[f.key]}</dd>
+                )}
               </div>
             </dl>
           </article>
