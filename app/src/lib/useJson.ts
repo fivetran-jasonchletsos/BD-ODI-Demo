@@ -13,7 +13,10 @@ export function useJson<T>(path: string): FetchState<T> {
     let cancelled = false;
     setState({ status: 'loading' });
 
-    fetch(path)
+    const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+    const resolvedPath = path.startsWith('/') ? `${base}${path}` : path;
+
+    fetch(resolvedPath)
       .then((res) => {
         if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
         return res.json();
