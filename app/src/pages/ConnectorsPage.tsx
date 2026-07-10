@@ -1,4 +1,5 @@
 import { FINDINGS } from '../lib/findings';
+import { LIVE_CONNECTORS } from '../lib/liveConnectors';
 
 function labelForSourceUrl(url: string): string {
   if (url.includes('/core-concepts/syncoverview')) return 'Sync overview';
@@ -45,6 +46,16 @@ export default function ConnectorsPage() {
                 <td className="px-4 py-3 font-semibold text-navy-600">
                   {f.system}
                   <div className="mt-1 font-mono text-xs font-normal text-slate-400">service: {f.serviceIdentifier}</div>
+                  {LIVE_CONNECTORS[f.key] && (
+                    <a
+                      href={LIVE_CONNECTORS[f.key]!.dashboardUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="badge mt-2 inline-flex items-center gap-1 bg-emerald-100 font-normal text-emerald-800 hover:bg-emerald-200"
+                    >
+                      Live in Fivetran &middot; {LIVE_CONNECTORS[f.key]!.status}
+                    </a>
+                  )}
                 </td>
                 <td className="px-4 py-3 text-slate-700">{f.currentApproach}</td>
                 <td className="px-4 py-3 text-slate-700">{f.currentPain}</td>

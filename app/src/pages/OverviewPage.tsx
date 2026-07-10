@@ -1,4 +1,5 @@
 import { FINDINGS, type Verification } from '../lib/findings';
+import { LIVE_CONNECTORS } from '../lib/liveConnectors';
 
 const VERIFICATION_LABEL: Record<Verification, string> = {
   confirmed: 'Confirmed',
@@ -60,9 +61,21 @@ export default function OverviewPage() {
           <article key={f.key} className="card flex flex-col p-5">
             <div className="flex items-start justify-between gap-3">
               <h2 className="text-lg font-semibold text-navy-500">{f.system}</h2>
-              <span className={`badge shrink-0 ${VERIFICATION_CLASSES[f.syncFrequencyVerification]}`}>
-                {VERIFICATION_LABEL[f.syncFrequencyVerification]}
-              </span>
+              <div className="flex shrink-0 flex-col items-end gap-1">
+                <span className={`badge ${VERIFICATION_CLASSES[f.syncFrequencyVerification]}`}>
+                  {VERIFICATION_LABEL[f.syncFrequencyVerification]}
+                </span>
+                {LIVE_CONNECTORS[f.key] && (
+                  <a
+                    href={LIVE_CONNECTORS[f.key]!.dashboardUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="badge bg-emerald-100 text-emerald-800 hover:bg-emerald-200"
+                  >
+                    Live in Fivetran
+                  </a>
+                )}
+              </div>
             </div>
 
             <dl className="mt-4 space-y-3 text-sm">

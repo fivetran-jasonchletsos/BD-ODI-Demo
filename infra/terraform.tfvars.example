@@ -4,6 +4,11 @@
 fivetran_api_key    = "your-fivetran-api-key"
 fivetran_api_secret = "your-fivetran-api-secret"
 
+# Existing Fivetran group/destination id in the shared demo account that
+# the LIVE monday.com and Workday Adaptive Planning connectors attach to.
+# Not used by the Salesforce/Coupa scaffolding, which stays unapplied.
+fivetran_group_id = "your-existing-fivetran-group-id"
+
 snowflake_account   = "xy12345.us-east-1.snowflakecomputing.com"
 snowflake_database  = "jason_chletsos_bd"
 snowflake_warehouse = "your-snowflake-warehouse"

@@ -5,6 +5,7 @@ const NAV_ITEMS = [
   { to: '/architecture', label: 'Architecture' },
   { to: '/connectors', label: 'Connectors' },
   { to: '/dashboard', label: 'Dashboard' },
+  { to: '/compliance', label: 'Compliance' },
 ];
 
 function navLinkClasses({ isActive }: { isActive: boolean }): string {

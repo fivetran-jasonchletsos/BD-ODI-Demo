@@ -4,6 +4,7 @@ import OverviewPage from './pages/OverviewPage';
 import ArchitecturePage from './pages/ArchitecturePage';
 import ConnectorsPage from './pages/ConnectorsPage';
 import DashboardPage from './pages/DashboardPage';
+import CompliancePage from './pages/CompliancePage';
 import NotFoundPage from './pages/NotFoundPage';
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="architecture" element={<ArchitecturePage />} />
         <Route path="connectors" element={<ConnectorsPage />} />
         <Route path="dashboard" element={<DashboardPage />} />
+        <Route path="compliance" element={<CompliancePage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>

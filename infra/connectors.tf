@@ -3,11 +3,17 @@
 # Fivetran narrative). Service identifiers and sync frequencies below are
 # taken directly from the BD-ODI-Demo research findings; each connector has
 # a source-cited comment. Connector-specific auth (OAuth credentials,
-# personal API tokens, etc.) is intentionally NOT modeled here — this repo
-# is code-only scaffolding and is never applied against a real Fivetran or
-# Snowflake account, so connector `config` blocks are left to the values
-# Fivetran can accept without them (auth is completed via the connector's
-# `setup_url`, see outputs.tf).
+# personal API tokens, etc.) is intentionally NOT modeled here -- connector
+# `config` blocks are left to the values Fivetran can accept without them
+# (auth is completed via the connector's `setup_url`, see outputs.tf).
+#
+# Salesforce and Coupa (below) remain code-only scaffolding: paused,
+# attached to the never-applied fivetran_group.bd / fivetran_destination.bd,
+# validated with `terraform validate` against zero real credentials.
+#
+# monday.com and Workday Adaptive Planning are LIVE for today's demo:
+# unpaused, attached to var.fivetran_group_id (an existing destination in
+# the shared demo Fivetran account), and meant to be applied for real.
 
 # --- 1. Salesforce (Sales Cloud) ---
 # Current state: BD ingests via Azure Data Factory (ADF) and sees latency
@@ -80,15 +86,20 @@ resource "fivetran_connector_schedule" "coupa" {
 # Service identifier "monday" confirmed via the literal example request
 # body on the Fivetran API Configuration doc
 # (POST /v1/connections, "service": "monday").
+#
+# LIVE for the afternoon demo: attached to var.fivetran_group_id, an
+# existing destination in the shared demo Fivetran account -- not the
+# fivetran_group.bd / fivetran_destination.bd scaffolding above, which
+# stays unapplied. No config block here on purpose: auth (Personal API
+# Token) is completed by hand via the connector's setup_url (see
+# outputs.tf) so the token never passes through Terraform state.
 resource "fivetran_connector" "monday" {
-  group_id = fivetran_group.bd.id
+  group_id = var.fivetran_group_id
   service  = "monday"
 
   destination_schema {
     name = "jason_chletsos_bd_monday"
   }
-
-  depends_on = [fivetran_destination.bd]
 }
 
 # Sync frequency: monday.com is classified by Fivetran as a "Lite"
@@ -99,11 +110,12 @@ resource "fivetran_connector" "monday" {
 # (source: fivetran.com/docs/core-concepts/syncoverview,
 # fivetran.com/docs/connectors/applications/monday.com).
 resource "fivetran_connector_schedule" "monday" {
-  connector_id      = fivetran_connector.monday.id
-  sync_frequency    = var.monday_sync_frequency_minutes
-  schedule_type     = "auto"
-  paused            = "true"
-  pause_after_trial = "true"
+  connector_id   = fivetran_connector.monday.id
+  sync_frequency = var.monday_sync_frequency_minutes
+  schedule_type  = "auto"
+  # Unpaused: this connector is live for today's demo, not scaffolding.
+  paused            = "false"
+  pause_after_trial = "false"
 }
 
 # --- 4. Workday Adaptive Planning ---
@@ -114,15 +126,22 @@ resource "fivetran_connector_schedule" "monday" {
 # Service identifier "workday_adaptive" confirmed via Fivetran's beta REST
 # API create-connection reference (service=workday_adaptive) -- NOT
 # "workday_adaptive_planning" or "adaptive_insights".
+#
+# LIVE for the afternoon demo: attached to var.fivetran_group_id, an
+# existing destination in the shared demo Fivetran account -- not the
+# fivetran_group.bd / fivetran_destination.bd scaffolding above, which
+# stays unapplied. No config block here on purpose: auth (login/password or
+# Connect Card) is completed by hand via the connector's setup_url (see
+# outputs.tf) so those credentials never pass through Terraform state.
+# Use the real Workday ADAPTIVE PLANNING credentials, not Workday HCM/RaaS
+# credentials -- different product, different host.
 resource "fivetran_connector" "workday_adaptive" {
-  group_id = fivetran_group.bd.id
+  group_id = var.fivetran_group_id
   service  = "workday_adaptive"
 
   destination_schema {
     name = "jason_chletsos_bd_workday_adaptive"
   }
-
-  depends_on = [fivetran_destination.bd]
 }
 
 # TODO(sync-frequency): NOT VERIFIED. Fivetran's Workday Adaptive Planning
@@ -134,9 +153,10 @@ resource "fivetran_connector" "workday_adaptive" {
 # support/product before quoting a number to BD. Do not change this
 # default without re-verifying against current Fivetran docs.
 resource "fivetran_connector_schedule" "workday_adaptive" {
-  connector_id      = fivetran_connector.workday_adaptive.id
-  sync_frequency    = var.workday_adaptive_sync_frequency_minutes
-  schedule_type     = "auto"
-  paused            = "true"
-  pause_after_trial = "true"
+  connector_id   = fivetran_connector.workday_adaptive.id
+  sync_frequency = var.workday_adaptive_sync_frequency_minutes
+  schedule_type  = "auto"
+  # Unpaused: this connector is live for today's demo, not scaffolding.
+  paused            = "false"
+  pause_after_trial = "false"
 }

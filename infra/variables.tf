@@ -14,6 +14,19 @@ variable "fivetran_api_secret" {
   default     = ""
 }
 
+# --- Existing live destination (afternoon demo) ---
+# monday.com and Workday Adaptive Planning are going live today against an
+# existing Fivetran destination/group already provisioned in the shared
+# demo Fivetran account -- not the fivetran_group.bd / fivetran_destination.bd
+# scaffolding below, which stays unapplied. Set this to that group's id.
+
+variable "fivetran_group_id" {
+  description = "Existing Fivetran group/destination id to attach the live monday.com and Workday Adaptive Planning connectors to."
+  type        = string
+  sensitive   = true
+  default     = ""
+}
+
 # --- Snowflake destination connection details ---
 # These describe the Snowflake account Fivetran will write into via the
 # fivetran_destination resource. They are not used to provision Snowflake
