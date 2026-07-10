@@ -34,8 +34,7 @@ export default function CompliancePage() {
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-bold text-slate-900">SOX Compliance</h1>
-        <p className="mt-3 max-w-3xl text-sm font-semibold text-navy-600">{SOX_FRAMING.headline}</p>
-        <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">{SOX_FRAMING.body}</p>
+        <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-600">{SOX_FRAMING.body}</p>
       </div>
 
       <section className="grid grid-cols-1 gap-5 md:grid-cols-2">

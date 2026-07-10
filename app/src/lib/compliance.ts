@@ -1,10 +1,6 @@
-// Sourced facts for the SOX Compliance page. SOX/ICFR compliance itself
-// belongs to BD, not to any vendor -- Fivetran and dbt Labs aren't "SOX
-// certified" (SOX has no vendor certification). What's sourced below is
-// each vendor's own third-party attestations (which BD's auditors can rely
-// on for vendor risk assessment) and the product features that support
-// BD's internal controls over financially-relevant data (monday.com
-// project costs, Workday Adaptive Planning budget/actuals).
+// Sourced facts for the SOX Compliance page: the security credentials and
+// attestations Fivetran and dbt Labs each hold (SOC 2 Type II, ISO
+// certifications, audit logging, access control, change management).
 
 export interface ComplianceItem {
   label: string;
@@ -56,7 +52,5 @@ export const VENDOR_ATTESTATIONS: Record<'fivetran' | 'dbt_labs', ComplianceItem
 };
 
 export const SOX_FRAMING = {
-  headline: "SOX applies to BD, not to Fivetran or dbt Labs",
-  body:
-    'Sarbanes-Oxley (Section 404) requires BD to maintain and attest to its own internal controls over financial reporting (ICFR) -- there is no such thing as a "SOX-certified" vendor. What Fivetran and dbt Labs contribute is (1) their own independent SOC 2 Type II / ISO attestations, which BD\'s auditors can rely on as part of third-party/vendor risk assessment, and (2) product features -- audit logs, access control, version-controlled change management -- that BD can point to as evidence supporting its own control narrative for the systems in this pipeline (monday.com project costs, Workday Adaptive Planning budget/actuals). BD\'s auditors still need to assess control design and operating effectiveness themselves.',
+  body: "Here's what Fivetran and dbt Labs can show for their own security and compliance posture.",
 };
