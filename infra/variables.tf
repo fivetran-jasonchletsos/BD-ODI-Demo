@@ -109,3 +109,9 @@ variable "workday_adaptive_sync_frequency_minutes" {
   type        = string
   default     = "1440"
 }
+
+variable "workday_hcm_sync_frequency_minutes" {
+  description = "Workday HCM connector sync frequency in minutes. NOT VERIFIED -- this connector is an ad hoc live substitute added same-day (see connectors.tf comment); not part of the sourced BD-ODI-Demo research findings. Defaulted to the platform default of 1440 minutes."
+  type        = string
+  default     = "1440"
+}

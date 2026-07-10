@@ -160,3 +160,41 @@ resource "fivetran_connector_schedule" "workday_adaptive" {
   paused            = "false"
   pause_after_trial = "false"
 }
+
+# --- 5. Workday HCM (live substitute for Adaptive Planning, today only) ---
+# BD's actual ask is Workday Adaptive Planning (financial planning), not
+# Workday HCM (workforce/HR) -- but only valid Workday HCM/RaaS credentials
+# were available in time for this demo, and Adaptive Planning's connector
+# authenticates against a completely different backend that these
+# credentials cannot reach. Rather than force a live auth failure on stage,
+# this stands up a genuinely live Workday connector using the credentials
+# on hand, while Workday Adaptive Planning itself stays the accurate mock
+# narrative (see app/ + README). Do not present this as "Adaptive Planning
+# live" -- it demonstrates real Fivetran connectivity to Workday, not the
+# specific budget-vs-actual story BD asked about.
+#
+# Service identifier "workday_hcm" confirmed via Fivetran's Workday HCM API
+# Configuration doc (fivetran.com/docs/connectors/applications/workday-hcm/api-configuration).
+# No config block here on purpose: auth (domain host name, username,
+# password) is completed by hand via the connector's setup_url (see
+# outputs.tf) so those credentials never pass through Terraform state.
+resource "fivetran_connector" "workday_hcm" {
+  group_id = var.fivetran_group_id
+  service  = "workday_hcm"
+
+  destination_schema {
+    name = "jason_chletsos_bd_workday_hcm"
+  }
+}
+
+# TODO(sync-frequency): NOT VERIFIED for this ad hoc addition. Defaulted to
+# the platform default of 1440 minutes (24 hours); a one-time force-synced
+# demo doesn't depend on this value. Re-verify before treating this as a
+# durable part of the BD narrative.
+resource "fivetran_connector_schedule" "workday_hcm" {
+  connector_id   = fivetran_connector.workday_hcm.id
+  sync_frequency = var.workday_hcm_sync_frequency_minutes
+  schedule_type  = "auto"
+  paused            = "false"
+  pause_after_trial = "false"
+}
